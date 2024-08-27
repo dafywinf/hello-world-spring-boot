@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    username: sa
+    password: password
+    driver-class-name: org.hsqldb.jdbcDriver
+    url: jdbc:hsqldb:mem:testdb
+#  jpa:
+#    database-platform: org.hibernate.dialect.H2Dialect
+#  h2:
+#    console:
+#      enabled: true

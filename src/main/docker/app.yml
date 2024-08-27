@@ -1,0 +1,19 @@
+name: hello-world
+
+services:
+
+  app:
+    image: hello-world-spring-boot
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - SPRING_PROFILES_ACTIVE=prod
+    ports:
+      - 127.0.0.1:8080:8080
+    depends_on:
+      postgresql:
+        condition: service_healthy
+
+  postgresql:
+    extends:
+      service: postgresql
+      file: ./postgresql.yml
