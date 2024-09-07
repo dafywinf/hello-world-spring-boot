@@ -1,0 +1,7 @@
+name: hello-world
+
+services:
+  postgresql:
+    extends:
+      service: postgresql
+      file: ./postgresql.yml

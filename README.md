@@ -1,14 +1,33 @@
 ## Project: Hello World Spring Boot Application
 
-The objective is to create a Spring Boot application with a simple RESTful endpoint that returns a "Hello World" message along with the current date and time. The date should be retrieved from a PostgreSQL database to demonstrate database integration. The application should be containerized using Docker for easy deployment.
+The objective is to create a Spring Boot application with a simple RESTful endpoint that returns a "Hello World" message
+along with the current date and time. The date should be retrieved from a PostgreSQL database to demonstrate database
+integration. The application should be containerized using Docker for easy deployment.
+
+# Architectural Decision Records (ADRs)
+
+[This document](/documentation/architectural-decision-records/README.md) provides a list of all Architectural Decision
+Records (ADRs) for the project.
+
+# Dev Setup
+
+Install the google-java-format plugin in IntelliJ IDEA to format the code according to Google's Java Style Guide.
+
+[Google-java-format Plugin](https://github.com/google/google-java-format/blob/master/README.md#intellij-jre-config)
+
+Configure hot reload for Spring Boot applications in IntelliJ IDEA.
+
+https://www.jhipster.tech/configuring-ide-idea
+
+```bash
 
 # Requirements
 Detailed requirements for the project.
 
-* [Requirements](./requirements.md)
+* [Requirements](documentation/requirements.md)
+```
 
 # Deployment Instructions
-
 
 ## Local Deployment
 
@@ -26,11 +45,19 @@ mvn clean install
 
 # Access the RESTful endpoint 
  wget -qO- localhost:8080/api/hello
+ ```
+
+## Helpful Commands
+
+# List Docker Image Layers
+
+docker history hello-world-spring-boot
+
 ```
 
-
 ### PostgreSQL Database Setup
-Run the Docker Compose command to start  the PostgreSQL database containers:
+
+Run the Docker Compose command to start the PostgreSQL database containers:
 
 ```bash
 # Start PostgreSQL database container
@@ -52,7 +79,6 @@ docker exec -it hello-world-postgresql-1 bash
 # Query the 'hello_logs' table
 SELECT * FROM hello_logs;
 ```
-
 
 ## Technical Research
 

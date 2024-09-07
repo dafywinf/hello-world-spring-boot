@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: hello-world
+  liquibase:
+    contexts: test
+    change-log: classpath:config/liquibase/master.xml
+  main:
+    allow-bean-definition-overriding: true
+  jpa:
+    hibernate:
+      ddl-auto: update

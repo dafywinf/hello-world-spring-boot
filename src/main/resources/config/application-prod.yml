@@ -1,0 +1,29 @@
+logging:
+  level:
+    ROOT: INFO
+    com.dafywinf: INFO
+
+spring:
+  devtools:
+    restart:
+      enabled: false
+    livereload:
+      enabled: false
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://localhost:5432/${spring.application.name}
+    username: hello-world
+    password:
+    hikari:
+      poolName: Hikari
+      auto-commit: false
+  # Replace by 'prod, faker' to add the faker context and have sample data loaded in production
+  liquibase:
+    contexts: prod
+  mail:
+    host: localhost
+    port: 25
+    username:
+    password:
+  thymeleaf:
+    cache: true
