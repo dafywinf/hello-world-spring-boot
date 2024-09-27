@@ -32,7 +32,7 @@
         <docker.maven.plugin.fabric8.version>0.40.3</docker.maven.plugin.fabric8.version>
         <argLine>-Djava.security.egd=file:/dev/./urandom -Xmx1G</argLine>
         <java.version>17</java.version>
-        <jhipster-framework.version>8.6.0</jhipster-framework.version>
+        <jhipster-framework.version>8.7.0</jhipster-framework.version>
         <springdoc-openapi-starter-webmvc-ui.version>2.6.0</springdoc-openapi-starter-webmvc-ui.version>
         <spring-boot.version>${project.parent.version}</spring-boot.version>
         <profile.api-docs/>
